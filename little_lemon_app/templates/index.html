@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Accueil - Little Lemon{% endblock %}
+
+{% block content %}
+<!-- Section Jumbotron -->
+<section class="p-5 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-5 text-center">
+        <h1 class="display-5 fw-bold">Bienvenue chez Little Lemon</h1>
+        <p class="col-md-8 mx-auto fs-4">Savourez les délices méditerranéens dans une ambiance chaleureuse et conviviale.</p>
+        <a class="btn btn-primary btn-lg" href="{% url 'reservation' %}" role="button" aria-label="Réserver une table">Réserver une table</a>
+    </div>
+</section>
+
+<!-- Section des spécialités -->
+<section class="text-center">
+    <h2 class="mb-4">Nos spécialités</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for item in specialites %}
+        <div class="col">
+            <div class="card h-100">
+                <img src="{{ item.image.url }}" class="card-img-top" alt="{{ item.nom }}" loading="lazy">
+                <div class="card-body">
+                    <h5 class="card-title">{{ item.nom }}</h5>
+                    <p class="card-text">{{ item.description }}</p>
+                    <a href="{% url 'menu' %}" class="btn btn-secondary">Voir le menu</a>
+                </div>
+                {% if item.prix %}
+                <div class="card-footer">
+                    <strong class="text-muted">{{ item.prix }}€</strong>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        {% empty %}
+        <p class="text-muted">Aucune spécialité n'est disponible pour le moment.</p>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
