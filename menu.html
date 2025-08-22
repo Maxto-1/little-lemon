@@ -1,18 +1,98 @@
-{% extends "base.html" %}
-{% block title %}Menu - Little Lemon{% endblock %}
-{% block content %}
-<h1 class="text-center my-4">Notre Menu</h1>
-<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-    <div class="col">
-        <div class="card h-100">
-            <img src="{% static 'img/bruschetta.jpg' %}" class="card-img-top" alt="Bruschetta">
-            <div class="card-body">
-                <h5 class="card-title">Bruschetta</h5>
-                <p class="card-text">Tomates, basilic, huile d'olive.</p>
-            </div>
-            <div class="card-footer"><strong class="text-muted">8.50€</strong></div>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Menu - Little Lemon</title>
+
+    <!-- Bootstrap CSS (CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+    <!-- CSS local (décommentez si présent) -->
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Little Lemon</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMain">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link active" href="menu.html">Menu</a></li>
+                <li class="nav-item"><a class="nav-link" href="reservation.html">Réservation</a></li>
+            </ul>
         </div>
     </div>
-    <!-- autres plats -->
-</div>
-{% endblock %}
+</nav>
+
+<main class="container my-4">
+    <h1 class="text-center my-4">Notre Menu</h1>
+
+    <!-- Section Entrées -->
+    <h2 class="mt-5 mb-3">Entrées</h2>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <div class="col">
+            <div class="card h-100">
+                <img src="Grill.jpg" class="card-img-top" alt="Bruschetta">
+                <div class="card-body">
+                    <h5 class="card-title">Bruschetta</h5>
+                    <p class="card-text">Pain grillé frotté à l'ail et garni de tomates fraîches, basilic et huile d'olive.</p>
+                </div>
+                <div class="card-footer">
+                    <strong class="text-muted">8.50€</strong>
+                </div>
+            </div>
+        </div>
+        <!-- Ajoutez d'autres entrées ici -->
+    </div>
+
+    <!-- Section Plats Principaux -->
+    <h2 class="mt-5 mb-3">Plats Principaux</h2>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <div class="col">
+            <div class="card h-100">
+                <img src="salad.jpg" class="card-img-top" alt="Salade Grecque">
+                <div class="card-body">
+                    <h5 class="card-title">Salade Grecque</h5>
+                    <p class="card-text">Salade croquante avec concombres, tomates, oignons rouges, olives et fromage feta.</p>
+                </div>
+                <div class="card-footer">
+                    <strong class="text-muted">14.00€</strong>
+                </div>
+            </div>
+        </div>
+        <!-- Ajoutez d'autres plats ici -->
+    </div>
+
+    <!-- Section Desserts -->
+    <h2 class="mt-5 mb-3">Desserts</h2>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-5">
+        <div class="col">
+            <div class="card h-100">
+                <img src="lemon dessert B.jpg" class="card-img-top" alt="Dessert au citron">
+                <div class="card-body">
+                    <h5 class="card-title">Tarte au citron</h5>
+                    <p class="card-text">Notre fameuse tarte au citron meringuée, un délice acidulé.</p>
+                </div>
+                <div class="card-footer">
+                    <strong class="text-muted">9.00€</strong>
+                </div>
+            </div>
+        </div>
+        <!-- Ajoutez d'autres desserts ici -->
+    </div>
+</main>
+
+<footer class="bg-light py-4 mt-5 border-top">
+    <div class="container text-center">
+        <p class="text-muted mb-0">&copy; 2025 Little Lemon</p>
+    </div>
+</footer>
+
+<!-- Bootstrap JS bundle (CDN) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
