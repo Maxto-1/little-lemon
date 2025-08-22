@@ -1,61 +1,18 @@
 {% extends "base.html" %}
-
 {% block title %}Menu - Little Lemon{% endblock %}
-
 {% block content %}
 <h1 class="text-center my-4">Notre Menu</h1>
-
-<!-- Section Entrées -->
-<h2 class="mt-5 mb-3">Entrées</h2>
 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
     <div class="col">
         <div class="card h-100">
-            <img src="/static/img/Grill.jpg" class="card-img-top" alt="Bruschetta">
+            <img src="{% static 'img/bruschetta.jpg' %}" class="card-img-top" alt="Bruschetta">
             <div class="card-body">
                 <h5 class="card-title">Bruschetta</h5>
-                <p class="card-text">Pain grillé frotté à l'ail et garni de tomates fraîches, basilic et huile d'olive.</p>
+                <p class="card-text">Tomates, basilic, huile d'olive.</p>
             </div>
-            <div class="card-footer">
-                <strong class="text-muted">8.50€</strong>
-            </div>
+            <div class="card-footer"><strong class="text-muted">8.50€</strong></div>
         </div>
     </div>
-    <!-- Ajoutez d'autres entrées ici -->
-</div>
-
-<!-- Section Plats Principaux -->
-<h2 class="mt-5 mb-3">Plats Principaux</h2>
-<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-    <div class="col">
-        <div class="card h-100">
-            <img src="/static/img/salade.jpg" class="card-img-top" alt="Salade Grecque">
-            <div class="card-body">
-                <h5 class="card-title">Salade Grecque</h5>
-                <p class="card-text">Salade croquante avec concombres, tomates, oignons rouges, olives et fromage feta.</p>
-            </div>
-            <div class="card-footer">
-                <strong class="text-muted">14.00€</strong>
-            </div>
-        </div>
-    </div>
-    <!-- Ajoutez d'autres plats ici -->
-</div>
-
-<!-- Section Desserts -->
-<h2 class="mt-5 mb-3">Desserts</h2>
-<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-    <div class="col">
-        <div class="card h-100">
-            <img src="/static/img/lemon dessert B.jpg" class="card-img-top" alt="Dessert au citron">
-            <div class="card-body">
-                <h5 class="card-title">Tarte au citron</h5>
-                <p class="card-text">Notre fameuse tarte au citron meringuée, un délice acidulé.</p>
-            </div>
-            <div class="card-footer">
-                <strong class="text-muted">9.00€</strong>
-            </div>
-        </div>
-    </div>
-    <!-- Ajoutez d'autres desserts ici -->
+    <!-- autres plats -->
 </div>
 {% endblock %}
